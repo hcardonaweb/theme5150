@@ -1,0 +1,351 @@
+/* clear */
+.clear:before,
+.clear:after{
+  content:' ';
+  display:table;
+}
+.clear:after{ clear: both; }
+.clear{ *zoom: 1; }
+
+section{
+  position: relative;
+}
+.toggle-btn {
+  cursor: pointer;
+}
+.toggle-content {
+  display: none;
+}
+
+img{
+  vertical-align: middle;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  max-width: 100%;
+}
+
+input{
+  border: 1px solid #ccc;
+}
+input:focus{
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+form, label, input{
+  display: block;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+main {
+  min-height: 90vh;
+}
+//NEED THIS FOR BOOTSTRAP ISSUE WITH IE
+// March 2020 - moved to header, was causing issues on non-IE mobile (-SR)
+//.row {
+//  width: 100%;
+//}
+/*
+ * Default WP Alignment Classes
+ *****************************************************************************/
+
+.aligncenter,.alignleft,.alignright {
+  display: block;
+  padding: 0;
+}
+
+.aligncenter {
+  float: none;
+  margin: .5em auto 1em;
+}
+
+.alignright {
+  float: right;
+  margin: .5em 0 1em 1em;
+}
+
+.alignleft {
+  float: left;
+  margin: .5em 1em 1em 0;
+}
+
+//REMOVE FLOATS FOR NARROW DEVICES
+@media only screen and (max-width: 668px) {
+  //THIS IS IN CASE WE ARE MOVING BLOG CONTENT FROM A SITE THAT WAS USING GUTENBURG
+  .wp-block-image {
+    figure.alignleft, img.alignleft, figure.alignright, img.alignright {
+      float: none;
+    }
+  }
+  figure.alignleft, img.alignleft, figure.alignright, img.alignright {
+    float: none;
+  }
+}
+
+.wp-caption {
+  padding: 5px 0;
+  text-align: center;
+  display: table;
+}
+
+.wp-caption img {
+  display: inline;
+}
+
+.wp-caption p.wp-caption-text {
+  margin: 5px 0 0;
+  padding: 0;
+  text-align: center;
+  font-size: 75%;
+  font-weight: 100;
+  font-style: italic;
+  color: $dark-gray ;
+  caption-side: bottom;
+  display: table-caption;
+}
+.center{
+  text-align: center;
+}
+
+.fixed-body {
+  overflow: hidden;
+}
+.noscroll{
+  position: fixed;
+  overflow-y:scroll;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+
+//IFRAME VIDEOS
+
+
+
+
+.video-thumb-container {
+  position: relative;
+  cursor: pointer;
+  .textblock {
+    margin: 3em 0;
+  }
+  &.activated .video-responsive:after, &.activated .video-responsive:before {
+    display: none;
+  }
+  .video-responsive {
+    &:after, &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "Font Awesome 5 Duotone";
+      font-weight: 900;
+      font-size: 4em;
+      transition: all ease-in-out .3s;
+    }
+    &:after {
+      color: #F800AC;
+      cursor: pointer;
+      content: "\10f144";
+    }
+    &:before {
+      content: "\f144";
+      color: #fff;
+      cursor: pointer;
+    }
+    &.activated:after, &.activated:before {
+      display: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    @media screen and (min-width: $breakpoint-md) {
+      &:hover:after {
+        color: #fff;
+        transform: scale(1.5) translate(-35.5%, -35.5%);
+      }
+      &:hover:before {
+        color: #F800AC;
+        transform: scale(1.5) translate(-35.5%, -35.5%);
+      }
+    }
+  }
+}
+.video-responsive {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border: none;
+  }
+}
+
+
+
+
+//BUTTONS
+
+
+
+
+.btn {
+  outline: 0;
+  box-shadow: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  border: none;
+  padding: .5em 1.5em;
+  transition: all 300ms ease-in-out;
+}
+.btn-primary {
+  outline: 0;
+  box-shadow: none;
+  background: none;
+  color: #000;
+  border: 2px solid #000;
+  &:hover {
+    border-color: #F800AC;
+    background: none;
+    color: #F800AC;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+.btn-secondary {
+  outline: 0;
+  box-shadow: none;
+  background: #F800AC;
+  color: #fff;
+  &:hover {
+    color: #F800AC;
+    background-color: #fff;
+    border-color: #fff;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+.btn-light {
+  background: #fff;
+  color: #000;
+  &:hover {
+    color: #F800AC;
+    background: #fff;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+
+
+
+//TYPOGRAPHY
+
+
+
+
+body {
+  font-family: $sans-serif-font;
+  color: #444;
+  line-height: 1.4;
+}
+h1, h2, h3, h4, h5{
+  font-weight: 300;
+  color: #444;
+  margin: .5em 0;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+}
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+h4 {
+  font-size: 1.3em;
+  line-height: 1.1;
+}
+h5 {
+  font-size: 1em;
+  line-height: 1;
+}
+a{
+  color: #444;
+  text-decoration: none;
+}
+a:focus{ outline: 0; }
+a:hover,
+a:active{
+  outline:0;
+  cursor: pointer;
+  color: #F800AC;
+  text-decoration: none;
+}
+a[href="#"] {
+  cursor: default;
+}
+
+
+// Adding to Bootstrap
+
+.pt-6{
+  padding-top: 3.5rem !important;
+}
+.pb-6{
+  padding-bottom: 3.5rem !important;
+}
+.py-6{
+  padding-bottom: 3.5rem !important;
+  top: 3.5rem !important;
+}
+
+.pt-7{
+  padding-top: 3.5rem !important;
+}
+.pb-7{
+  padding-bottom: 3.5rem !important;
+}
+.py-7{
+  padding-bottom: 3.5rem !important;
+  top: 3.5rem !important;
+}
+
+.mt-7{
+  margin-top: 4rem !important;
+}
+.mb-7{
+  margin-bottom: 4rem !important;
+}
+.my-7{
+  margin-bottom: 4rem !important;
+  margin-top: 4rem !important;
+}
+
+.mt-7{
+  margin-top: 4rem !important;
+}
+.mb-7{
+  margin-bottom: 4rem !important;
+}
+.my-7{
+  margin-bottom: 4rem !important;
+  margin-top: 4rem !important;
+}

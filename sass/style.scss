@@ -1,0 +1,108 @@
+/*
+	Theme Name: THEME5150 Starter
+	Theme URI:
+	Description: Custom theme for ___.
+	Version: 1.7 - April 2019
+	Author: TRADEMARK 5150
+	Author URI: tm5150.com
+	Tags: Blank, HTML5, CSS3
+	License: Copyright TRADEMARK 5150
+*/
+
+/* =====================================
+          MOBILE FIRST STYLING
+      This has all universal styles
+   ===================================== */
+
+/* SITE VARIABLES */
+$darker-gray: #666;
+$dark-gray: #808285;
+$light-gray: #CCCCCC;
+$lighter-gray: #EBEBEB;
+$lightest-gray: #f5f5f5;
+
+$sans-serif-font: Arial;
+$serif-font: Times New Roman;
+
+$breakpoint-xs: 375px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+
+
+/*------------------------------------*\
+    SASS PARTIALS
+\*------------------------------------*/
+
+@import "global";
+@import "header-footer";
+@import "home";
+
+
+
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+  * {
+    background:transparent !important;
+    color:#000 !important;
+    box-shadow:none !important;
+    text-shadow:none !important;
+  }
+  a,
+  a:visited {
+    text-decoration:underline;
+  }
+  a[href]:after {
+    content:" (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content:" (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content:"";
+  }
+  pre,blockquote {
+    border:1px solid #999;
+    page-break-inside:avoid;
+  }
+  thead {
+    display:table-header-group;
+  }
+  tr,img {
+    page-break-inside:avoid;
+  }
+  img {
+    max-width:100% !important;
+  }
+  @page {
+    margin:0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans:3;
+    widows:3;
+  }
+  h2,
+  h3 {
+    page-break-after:avoid;
+  }
+}
