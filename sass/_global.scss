@@ -102,7 +102,7 @@ main {
   font-size: 75%;
   font-weight: 100;
   font-style: italic;
-  color: $dark-gray ;
+  color: $secondary ;
   caption-side: bottom;
   display: table-caption;
 }
@@ -261,13 +261,13 @@ main {
 
 
 body {
-  font-family: $sans-serif-font;
+  font-family: $fira-code;
   color: #444;
   line-height: 1.4;
 }
 h1, h2, h3, h4, h5{
   font-weight: 300;
-  color: #444;
+  color: $white;
   margin: .5em 0;
   line-height: 1.2;
 }
@@ -288,7 +288,8 @@ h5 {
   line-height: 1;
 }
 a{
-  color: #444;
+  color: $white;
+  margin-left: 15px;
   text-decoration: none;
 }
 a:focus{ outline: 0; }
@@ -296,11 +297,15 @@ a:hover,
 a:active{
   outline:0;
   cursor: pointer;
-  color: #F800AC;
+  color: $green;
   text-decoration: none;
 }
 a[href="#"] {
   cursor: default;
+}
+
+.fab:hover {
+  cursor: pointer;
 }
 
 

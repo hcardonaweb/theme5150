@@ -1,8 +1,38 @@
         <footer class="footer" role="contentinfo" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-            <div class="footer-wrapper footer-items d-flex justify-content-between flex-wrap container">
-                <div class="footer-links">
+            <div class="footer-wrapper footer-items d-flex flex-wrap justify-content-between container">
+                <div class="footer-copyright">
+                    <p>Made with <i class="fas fa-heart"></i> by Héctor Cardona</p>
+                </div>
+                <div class="footer-links justify-content-end">
                     <nav class="footer-nav-container">
-                        <?php theme5150_footer_nav(); ?>
+                        <?php // theme5150_footer_nav(); ?>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-dev"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-spotify"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </div>

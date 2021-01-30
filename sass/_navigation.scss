@@ -1,0 +1,86 @@
+// Header Navigation Styles
+
+#mobile-menu {
+  display: block;
+
+  @media screen and (min-width: $breakpoint-md) {
+    display: none;
+  }
+}
+
+#desktop-menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+
+  ul {
+    display: flex;
+    margin-bottom: 0;
+  }
+}
+
+.fa-jedi {
+  font-size: 35px;
+}
+
+// Footer Navigation Styles
+
+.footer-nav-container {
+  ul {
+    display: flex;
+    list-style-type: none;
+
+    li {
+
+      a {
+        &:active,
+        &:hover {
+          color: transparent;
+        }
+
+        i.fab {
+          font-size: 25px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+//Footer Icons
+
+.fa-heart {
+  color: $red;
+}
+
+.fa-dev:hover {
+  color: #3b49df;
+}
+
+.fa-discord:hover {
+  color: #7289da;
+}
+
+.fa-github:hover {
+  color: #2c974b;
+}
+
+.fa-spotify:hover {
+  color: #1ED760;
+}
+
+.fa-twitter:hover {
+  color: #1a91da;
+}
+
+.fa-dev,
+.fa-discord,
+.fa-github,
+.fa-spotify,
+.fa-twitter {
+  transition: color 0.3s ease-in-out 0s;
+}
+
+
