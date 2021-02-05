@@ -59,7 +59,7 @@
 
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?>>`
 
         <div id="nav-sliding-container">
 

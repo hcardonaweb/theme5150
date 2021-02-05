@@ -1,0 +1,41 @@
+.homepage-hero {
+  height: 80vh;
+  background-image: url(img/homepage-content/wave-bg.svg);
+  background-size: contain;
+  background-repeat: repeat-x;
+
+  .container {
+    .hero-text {
+      display: flex;
+
+      h1 {
+        font-weight: 700;
+        font-size: 50px;
+
+        @media screen and (min-width: $breakpoint-md) {
+          margin-top: 25%;
+        }
+      }
+
+      @media screen and (min-width: $breakpoint-md) {
+        width: 75%;
+      }
+    }
+  }
+}
+
+//CTA BANNER STYLES
+
+.cta-banner {
+  background-color: $secondary;
+  padding: 3em;
+
+  .container {
+    text-align: center;
+
+    h2 {
+      font-weight: 500;
+      font-size: 35px;
+    }
+  }
+}

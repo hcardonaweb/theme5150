@@ -1,7 +1,7 @@
         <footer class="footer" role="contentinfo" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
             <div class="footer-wrapper footer-items d-flex flex-wrap justify-content-between container">
                 <div class="footer-copyright">
-                    <p>Made with <i class="fas fa-heart"></i> by Héctor Cardona</p>
+                    <p>Made with <i class="fas fa-heart"></i> by Hector Cardona</p>
                 </div>
                 <div class="footer-links justify-content-end">
                     <nav class="footer-nav-container">
